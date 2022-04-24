@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { WebsitePageTypes } from './types';
 
 import { DesktopWrapper, MobileWrapper } from './ScreenWrappers';
-import Text from '../../components/foundations/Text';
 import Button from '../../components/commons/Button';
 import Modal from '../../components/commons/Modal';
 import Header from '../../components/commons/Header';
@@ -11,6 +10,7 @@ import Footer from '../../components/commons/Footer';
 import ThemeSwitcher from '../../components/commons/ThemeSwitcher';
 import { CloseIcon } from '../../../public/icons/closeIcon';
 import BurgerButton from '../../components/commons/BurgerButton';
+import Logo from '../../../public/icons/logo';
 
 import SEO from '../../SEO';
 
@@ -47,7 +47,7 @@ export default ({
                   display: 'flex',
                   justifyContent: 'flex-end',
                   width: '100%',
-                  padding: '20px 0 0 0',
+                  padding: '20px',
                 }
               }
               >
@@ -62,7 +62,7 @@ export default ({
         </MobileWrapper>
 
         <Header>
-          <Text variant="title" tag="span">logo</Text>
+          <Logo color={theme.color} />
           <DesktopWrapper>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <Nav />

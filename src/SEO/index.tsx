@@ -5,14 +5,14 @@ import seoProps from './types';
 
 export default ({ headTitle, prevImage }: seoProps) => {
   const hasHeadTitle = Boolean(headTitle);
-  const baseTitle = 'Boiler Plate';
+  const baseTitle = 'Gabriel Schultz';
   const title = hasHeadTitle
     ? (`${headTitle} | ${baseTitle}`)
     : baseTitle;
 
   const hasPrevImage = Boolean(prevImage);
 
-  const description = 'Boiler plate Next.js';
+  const description = 'Portfólio de Gabriel Schultz';
   const image = hasPrevImage ? prevImage : '';
   const urlBase = 'boiler-plate.com';
 
@@ -20,9 +20,9 @@ export default ({ headTitle, prevImage }: seoProps) => {
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="author" content="Gabriel Bridi" />
+      <meta name="author" content="Gabriel Schultz" />
       <meta name="keywords" content="Next.js, React, Portfolio" />
-      <meta httpEquiv="content-language" content="en-US" />
+      <meta httpEquiv="content-language" content="pt-BR" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
       {/* <!-- Open Graph / Facebook --> */}
