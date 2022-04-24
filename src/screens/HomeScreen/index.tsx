@@ -56,7 +56,7 @@ const Home = () => (
         I build stuff for the internet.
       </Text>
       <LinksCard>
-        {linksList.map((item) => <Link href={item.link}>{item.title}</Link>)}
+        {linksList.map((item) => <Link key={item.title} href={item.link}>{item.title}</Link>)}
       </LinksCard>
     </IntroductionCard>
   </PageWrapper>
