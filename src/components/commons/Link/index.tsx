@@ -31,7 +31,7 @@ export default function Link({
   return (
     <NextLink href={href} passHref>
       <StyledLink {...props}>
-        <Text variant={textTag} as="span">
+        <Text variant={textTag} as="span" link>
           {children}
         </Text>
       </StyledLink>

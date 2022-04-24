@@ -5,4 +5,5 @@ export interface TextTypes extends ComponentTypes {
     tag?: string
     as?: any
     color?: string
+    link?: boolean
 }

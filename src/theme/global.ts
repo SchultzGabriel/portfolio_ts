@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         background-color: ${({ theme }) => theme.backgroundColor};
         color: ${({ theme }) => theme.color};
+        font-family: Ubuntu, sans-serif;
     }
     #__next {
         flex: 1;

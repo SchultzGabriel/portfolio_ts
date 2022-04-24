@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import styled, { css } from 'styled-components';
 
@@ -45,16 +46,17 @@ export const TextStyleVariantsMap:any = {
 
 const TextBase = styled.span<TextTypes>`
   ${(props) => TextStyleVariantsMap[props.variant]}
-  color: ${(props) => (props.color ? props.color : props.theme.color)}
+  color: ${(props) => (props.link ? props.theme.draculaTheme.Green : props.color ? props.color : props.theme.color)}
 `;
 
 export default ({
-  tag, variant, children, color, ...props
+  tag, variant, children, color, link, ...props
 }:TextTypes) => (
   <TextBase
     as={tag}
     variant={variant}
     color={color}
+    link={link}
     {...props}
   >
     {children}
