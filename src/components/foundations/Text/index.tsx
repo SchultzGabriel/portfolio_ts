@@ -46,7 +46,6 @@ export const TextStyleVariantsMap:any = {
 
 const TextBase = styled.span<TextTypes>`
   ${(props) => TextStyleVariantsMap[props.variant]}
-  color: ${(props) => (props.link ? props.theme.draculaTheme.Green : props.color ? props.color : props.theme.color)}
 `;
 
 export default ({
@@ -56,7 +55,6 @@ export default ({
     as={tag}
     variant={variant}
     color={color}
-    link={link}
     {...props}
   >
     {children}

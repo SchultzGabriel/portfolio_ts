@@ -12,7 +12,7 @@ const ButtonGhost = css`
 
 const ButtonDefault = css`
   color: ${({ theme }) => theme.color};
-  background-color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primary};
 `;
 
 const ButtonWrapper = styled.button<ButtonTypes>`
