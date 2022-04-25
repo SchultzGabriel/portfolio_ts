@@ -38,11 +38,11 @@ const LinksCard = styled.ul`
 const linksList = [
   {
     title: 'My Work',
-    link: 'work',
+    link: '/work',
   },
   {
     title: 'About Me',
-    link: 'about',
+    link: '/about',
   },
 ];
 
