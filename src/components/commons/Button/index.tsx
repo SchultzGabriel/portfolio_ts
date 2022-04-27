@@ -22,7 +22,7 @@ const ButtonWrapper = styled.button<ButtonTypes>`
   justify-content: center;
   border: 0;
   cursor: pointer;
-  /* padding: 12px 26px; */
+  padding: 5px 5px;
   font-weight: bold;
   opacity: 1;
   transition: ${({ theme }) => theme.transition};
@@ -31,7 +31,7 @@ const ButtonWrapper = styled.button<ButtonTypes>`
     xs: css`
     `,
     md: css`
-      /* padding: 12px 43px; */
+      padding: 3px 10px;
     `,
   })}
   
