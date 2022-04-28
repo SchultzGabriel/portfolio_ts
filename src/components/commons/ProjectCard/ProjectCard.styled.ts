@@ -45,9 +45,25 @@ export const InfoWrapper = styled.div`
   width: 100%;
   height: auto;
   padding: 15px;
+
+  .buttonWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    ${breakpointMedia({
+    md: css`
+      flex-direction: row;
+      justify-content: center;
+    `,
+  })}
+  }
+
   ${breakpointMedia({
     md: css`
       width: 50%;
     `,
   })}
 `;
+
+// display: 'flex', flexDirection: 'row', gap: '15px'

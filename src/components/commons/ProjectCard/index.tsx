@@ -26,7 +26,7 @@ export default ({ project }: IProjectCard) => (
       <Text variant="paragraph2" tag="p">
         {project.description}
       </Text>
-      <div style={{ display: 'flex', flexDirection: 'row', gap: '15px' }}>
+      <div className="buttonWrapper">
         <a
           target="_blank"
           href={`https://github.com/schultz-gabriel/${project.links.github}`}
