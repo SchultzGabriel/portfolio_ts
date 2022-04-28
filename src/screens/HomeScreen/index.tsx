@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Link from '../../components/commons/Link';
 import Text from '../../components/foundations/Text';
+import Button from '../../components/commons/Button';
 
 import PageWrapper from '../../components/layout/PageWrapper';
 
@@ -56,7 +56,13 @@ const Home = () => (
         I build stuff for the internet.
       </Text>
       <LinksCard>
-        {linksList.map((item) => <Link key={item.title} href={item.link}>{item.title}</Link>)}
+        {linksList.map((item) => (
+          <Button key={item.title} href={item.link}>
+            <Text variant="paragraph1" tag="span" color="#fff">
+              {item.title}
+            </Text>
+          </Button>
+        ))}
       </LinksCard>
     </IntroductionCard>
   </PageWrapper>
