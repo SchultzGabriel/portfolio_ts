@@ -35,8 +35,8 @@ export const light = {
   color: '#020202',
   backgroundColor: '#fff',
 
-  secondary: '#bd93f9',
-  primary: '#ff5555',
+  primary: '#00a8e8',
+  secondary: '#007ea7',
 
   paragraph: '#767676',
   cardBG: 'rgba(196, 196, 196, 0.2)',
@@ -55,8 +55,8 @@ export const dark = {
   color: '#fff',
   backgroundColor: '#020202',
 
-  primary: '#bd93f9',
-  secondary: '#ff5555',
+  primary: '#007ea7',
+  secondary: '#00a8e8',
 
   paragraph: '#767676',
   cardBG: 'rgba(196, 196, 196, 0.2)',

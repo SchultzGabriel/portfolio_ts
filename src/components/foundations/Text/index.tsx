@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../theme/utils/breakpointMedia';
 import { TextTypes } from './types';
 
-export const TextStyleVariantsMap:any = {
+export const TextStyleVariantsMap: any = {
   title: css`
     ${({ theme }) => css`
       font-size: ${theme.typographyVariants.titleXS.fontSize};
@@ -23,20 +23,20 @@ export const TextStyleVariantsMap:any = {
   })}
   `,
   subTitle: css`
-  font-size: ${({ theme }) => theme.typographyVariants.subTitle.fontSize};
-  font-weight: ${({ theme }) => theme.typographyVariants.subTitle.fontWeight};
-  line-height: ${({ theme }) => theme.typographyVariants.subTitle.lineHeight};
-`,
+    font-size: ${({ theme }) => theme.typographyVariants.subTitle.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.subTitle.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.subTitle.lineHeight};
+  `,
   paragraph1: css`
     font-size: ${({ theme }) => theme.typographyVariants.paragraph1.fontSize};
     font-weight: ${({ theme }) => theme.typographyVariants.paragraph1.fontWeight};
     line-height: ${({ theme }) => theme.typographyVariants.paragraph1.lineHeight};
   `,
   paragraph2: css`
-  font-size: ${({ theme }) => theme.typographyVariants.paragraph2.fontSize};
-  font-weight: ${({ theme }) => theme.typographyVariants.paragraph2.fontWeight};
-  line-height: ${({ theme }) => theme.typographyVariants.paragraph2.lineHeight};
-`,
+    font-size: ${({ theme }) => theme.typographyVariants.paragraph2.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.paragraph2.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.paragraph2.lineHeight};
+  `,
   smallestException: css`
     font-size: ${({ theme }) => theme.typographyVariants.smallestException.fontSize};
     font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
@@ -46,19 +46,18 @@ export const TextStyleVariantsMap:any = {
 
 const TextBase = styled.span<TextTypes>`
   ${(props) => TextStyleVariantsMap[props.variant]}
-  color: ${(props) => (props.link ? props.theme.draculaTheme.Green : props.color ? props.color : props.theme.color)}
+  color: ${(props) => (props.color ? props.color : props.theme.color)}
 `;
 
 export default ({
-  tag, variant, children, color, link, ...props
-}:TextTypes) => (
-  <TextBase
-    as={tag}
-    variant={variant}
-    color={color}
-    link={link}
-    {...props}
-  >
+  tag,
+  variant,
+  children,
+  color,
+  link,
+  ...props
+}: TextTypes) => (
+  <TextBase as={tag} variant={variant} color={color} {...props}>
     {children}
   </TextBase>
 );

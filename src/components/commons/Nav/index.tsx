@@ -10,8 +10,8 @@ const navItems = [
     link: '/',
   },
   {
-    label: 'Blog',
-    link: '/',
+    label: 'My work',
+    link: '/work',
   },
 ];
 
@@ -20,7 +20,9 @@ export default () => (
     <LinkList>
       {navItems.map((item) => (
         <LinkItem key={item.label}>
-          <Button ghost href={item.link}>{item.label}</Button>
+          <Button ghost href={item.link}>
+            {item.label}
+          </Button>
         </LinkItem>
       ))}
     </LinkList>

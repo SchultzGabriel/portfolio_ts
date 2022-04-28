@@ -12,7 +12,7 @@ export default ({ headTitle, prevImage }: seoProps) => {
 
   const hasPrevImage = Boolean(prevImage);
 
-  const description = 'Portfólio de Gabriel Schultz';
+  const description = "Gabriel Schultz's Website";
   const image = hasPrevImage ? prevImage : '';
   const urlBase = 'boiler-plate.com';
 
@@ -21,7 +21,7 @@ export default ({ headTitle, prevImage }: seoProps) => {
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="author" content="Gabriel Schultz" />
-      <meta name="keywords" content="Next.js, React, Portfolio" />
+      <meta name="keywords" content="Next.js, React, Website" />
       <meta httpEquiv="content-language" content="pt-BR" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
