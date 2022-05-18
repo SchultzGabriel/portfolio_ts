@@ -9,11 +9,17 @@ export const ProjectsCard = styled.li`
   width: 100%;
   height: auto;
   border-radius: 12px;
+  box-shadow: 0 10px 15px -3px ${({ theme }) => theme.cardBG}, 0 4px 6px -4px ${({ theme }) => theme.cardBG};
   ${breakpointMedia({
     md: css`
-      width: 50%;
       flex-direction: row;
-    `,
+      `,
+    lg: css`
+        width: 75%;
+      `,
+    xl: css`
+        width: 60%;
+      `,
   })}
 `;
 
@@ -65,5 +71,3 @@ export const InfoWrapper = styled.div`
     `,
   })}
 `;
-
-// display: 'flex', flexDirection: 'row', gap: '15px'
