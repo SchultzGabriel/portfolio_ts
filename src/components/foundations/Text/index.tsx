@@ -45,8 +45,9 @@ export const TextStyleVariantsMap: any = {
 };
 
 const TextBase = styled.span<TextTypes>`
-  ${(props) => TextStyleVariantsMap[props.variant]}
-  color: ${(props) => (props.color ? props.color : props.theme.color)}
+  ${(props) => TextStyleVariantsMap[props.variant]};
+  color: ${(props) => (props.color ? props.color : props.theme.color)};
+  text-align: ${(props) => (props.align)};
 `;
 
 export default ({
@@ -55,9 +56,10 @@ export default ({
   children,
   color,
   link,
+  align = 'left',
   ...props
 }: TextTypes) => (
-  <TextBase as={tag} variant={variant} color={color} {...props}>
+  <TextBase as={tag} variant={variant} color={color} align={align} {...props}>
     {children}
   </TextBase>
 );
