@@ -10,7 +10,7 @@ import { ComponentTypes } from '../../types';
 interface LinkTypes extends ComponentTypes {
     href: string,
     // eslint-disable-next-line react/require-default-props
-    tag?: string
+    tag?: 'title' | 'subTitle' | 'paragraph1' | 'paragraph2' | 'smallestException'
 }
 
 const StyledLink = styled.a`

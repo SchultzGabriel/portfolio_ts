@@ -48,7 +48,7 @@ export default ({ project }: IProjectCard) => (
           >
             <Button fullWidth>
               <Text variant="paragraph1" tag="span" color="#fff">
-                Deploy
+                Running
               </Text>
             </Button>
           </a>

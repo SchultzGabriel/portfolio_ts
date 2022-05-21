@@ -13,6 +13,10 @@ const navItems = [
     label: 'My work',
     link: '/work',
   },
+  {
+    label: 'About me',
+    link: '/about',
+  },
 ];
 
 export default () => (
