@@ -10,6 +10,7 @@
     "lint": "next lint --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "babel-plugin-styled-components": "^2.0.7",
     "next": "latest",
     "nextjs-progressbar": "^0.0.14",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.1",
+    "@types/material-ui": "^0.21.12",
     "@types/node": "15.0.0",
     "@types/react": "17.0.4",
     "@types/react-dom": "17.0.3",
