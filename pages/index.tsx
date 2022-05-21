@@ -1,7 +1,19 @@
+import React from 'react';
 import HomeScreen from '../src/screens/HomeScreen';
+import AbotMe from '../src/screens/AboutMe';
+import MyWorkScreen from '../src/screens/MyWorkScreen';
+
 import websitePageHOC from '../src/wrappers/websitePage/hoc';
 
-export default websitePageHOC(HomeScreen, {
+const screen = () => (
+  <>
+    <HomeScreen />
+    <AbotMe />
+    <MyWorkScreen />
+  </>
+);
+
+export default websitePageHOC(screen, {
   pageWrapperProps: {
     seoProps: {
       headTitle: 'Início',
