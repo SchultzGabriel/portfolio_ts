@@ -19,6 +19,12 @@ const IntroductionCard = styled.div`
       width: 50%;
 `,
   })}
+
+  .imgWrapper{
+    width: 300px;
+    height: 300px;
+    display: flex;
+  }
 `;
 
 const githubProjectsList = [
@@ -79,9 +85,8 @@ const githubProjectsList = [
 const Home = () => (
   <PageWrapper>
     <IntroductionCard>
-      <div style={{
-        height: '320px', width: '320px', display: 'flex',
-      }}
+      <div
+        className="imgWrapper"
       >
         <img
         // className="imageCard"
