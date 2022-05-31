@@ -7,6 +7,7 @@ import PageWrapper from '../../components/layout/PageWrapper';
 import SkillsList from './MyWorkScreen.styled';
 
 import breakpointMedia from '../../theme/utils/breakpointMedia';
+import Button from '../../components/commons/Button';
 
 const IntroductionCard = styled.div`
   margin-top: .67em;
@@ -116,7 +117,6 @@ const Home = () => (
       {githubProjectsList.map((item) => (
         <Tooltip key={item.title} title={item.title}>
           <img
-        // className="imageCard"
             alt={item.title}
             src={item.icon}
             width={50}
@@ -125,6 +125,18 @@ const Home = () => (
         </Tooltip>
       ))}
     </SkillsList>
+    <a
+      target="_blank"
+      href="https://drive.google.com/file/d/1hcKNvQZHD1K_hzCrnNTS7WZh5Muq4tS8/view?usp=sharing"
+      rel="noreferrer"
+      style={{ textDecoration: 'none', marginTop: '2rem' }}
+    >
+      <Button>
+        <Text variant="paragraph1" tag="span" color="#fff">
+          Resume
+        </Text>
+      </Button>
+    </a>
   </PageWrapper>
 );
 
