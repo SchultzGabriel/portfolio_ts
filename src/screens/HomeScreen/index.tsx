@@ -2,7 +2,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Text from '../../components/foundations/Text';
-import Button from '../../components/commons/Button';
 
 import PageWrapper from '../../components/layout/PageWrapper';
 
@@ -15,36 +14,12 @@ const IntroductionCard = styled.div`
   align-items: center;
   width:100%;
   height: 75vh;
-  /* ${breakpointMedia({
-    md: css`
-    `,
-  })} */
-`;
-
-const LinksCard = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  /* width:100%; */
   ${breakpointMedia({
     md: css`
-    flex-direction: row;
+    width:50%;
     `,
   })}
 `;
-
-const linksList = [
-  {
-    title: 'My Work',
-    link: '/work',
-  },
-  {
-    title: 'About Me',
-    link: '/about',
-  },
-];
 
 const Home = () => (
   <PageWrapper>
@@ -52,18 +27,9 @@ const Home = () => (
       <Text variant="title" tag="h1">
         Hello, world! I'm Gabriel.
       </Text>
-      <Text variant="subTitle" tag="h3">
-        I build stuff for the internet.
+      <Text variant="subTitle" tag="h3" align="justify">
+        Brazilian software engineer, currently working as a ReactJS developer.
       </Text>
-      <LinksCard>
-        {linksList.map((item) => (
-          <Button key={item.title} href={item.link}>
-            <Text variant="paragraph1" tag="span" color="#fff">
-              {item.title}
-            </Text>
-          </Button>
-        ))}
-      </LinksCard>
     </IntroductionCard>
   </PageWrapper>
 );

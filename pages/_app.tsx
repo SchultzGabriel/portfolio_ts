@@ -16,7 +16,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/icons/developer.svg" />
+        <link rel="icon" href="/icons/s.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

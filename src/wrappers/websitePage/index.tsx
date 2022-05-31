@@ -78,7 +78,7 @@ export default ({
         </Header>
 
         {children}
-        <Footer />
+        <Footer color={theme.color} />
       </div>
     </>
   );
