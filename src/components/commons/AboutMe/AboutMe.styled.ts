@@ -24,18 +24,20 @@ const IntroductionCard = styled.div`
   margin-top: .67em;
   display: flex;
   flex-direction: column;
+  gap: 15px;
   align-items: center;
   width: 100%;
   ${breakpointMedia({
     md: css`
-      /* width: 50%; */
-      /* padding: 0 30px; */
 `,
   })}
 
   .imgWrapper{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
     display: flex;
   }
 `;
