@@ -2,44 +2,58 @@ import styled, { css } from 'styled-components';
 import breakpointMedia from '../../../theme/utils/breakpointMedia';
 
 export const ProjectsCard = styled.li`
+  background-color: ${({ theme }) => theme.cardBG};
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px ${({ theme }) => theme.cardBG}, 0 4px 6px -4px ${({ theme }) => theme.cardBG};
+  list-style: none;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02)
+  }
+`;
+
+export const LinkWraper = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ${({ theme }) => theme.cardBG};
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 15px -3px ${({ theme }) => theme.cardBG}, 0 4px 6px -4px ${({ theme }) => theme.cardBG};
+  text-decoration: none;
+
+
   ${breakpointMedia({
     md: css`
       flex-direction: row;
-      `,
-    lg: css`
-        width: 75%;
-      `,
-    xl: css`
-        width: 60%;
+      align-items: center;
       `,
   })}
 `;
 
 export const ImgWrapper = styled.div`
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  flex-grow: 1;
+  width: fit-content;
 
-  .imageCard {
+
+  .image {
     border-radius: 12px 12px 0 0;
+    height: auto;
+    width:100%;
     ${breakpointMedia({
     md: css`
+        width:250px;
+        height: 100%;
         border-radius: 12px 0 0 12px;
-      `,
+        `,
+
   })}
   }
 
   ${breakpointMedia({
     md: css`
-      width: 50%;
+      margin-right: auto;
     `,
   })}
 `;
@@ -51,23 +65,34 @@ export const InfoWrapper = styled.div`
   width: 100%;
   height: auto;
   padding: 15px;
-
-  .buttonWrapper{
+  
+  .infoText{
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .buttonWrapper{
+    display: none;
     flex-direction: column;
     gap: 15px;
     width: 100%;
     ${breakpointMedia({
     md: css`
-      flex-direction: row;
       justify-content: center;
-    `,
+      width: 30%;
+      `,
   })}
   }
-
+  
   ${breakpointMedia({
     md: css`
-      width: 50%;
-    `,
+      width: 70%;
+      justify-content: space-between;
+      flex-direction: row;
+      `,
+
   })}
 `;

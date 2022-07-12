@@ -4,6 +4,7 @@ import normalize from 'styled-normalize';
 const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
+        transition: ${({ theme }) => theme.transition};
     }
     ${normalize}
     body {

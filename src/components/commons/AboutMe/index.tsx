@@ -1,32 +1,10 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
 import { Tooltip } from '@material-ui/core';
-import Text from '../../components/foundations/Text';
+import Text from '../../foundations/Text';
 
-import PageWrapper from '../../components/layout/PageWrapper';
-import SkillsList from './MyWorkScreen.styled';
+import { AboutMeWrapper, IntroductionCard, SkillsList } from './AboutMe.styled';
 
-import breakpointMedia from '../../theme/utils/breakpointMedia';
-import Button from '../../components/commons/Button';
-
-const IntroductionCard = styled.div`
-  margin-top: .67em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  ${breakpointMedia({
-    md: css`
-      width: 50%;
-`,
-  })}
-
-  .imgWrapper{
-    width: 300px;
-    height: 300px;
-    display: flex;
-  }
-`;
+import Button from '../Button';
 
 const githubProjectsList = [
   {
@@ -83,8 +61,8 @@ const githubProjectsList = [
   },
 ];
 
-const Home = () => (
-  <PageWrapper>
+const AboutMe = () => (
+  <AboutMeWrapper>
     <IntroductionCard>
       <div
         className="imgWrapper"
@@ -97,21 +75,31 @@ const Home = () => (
         />
       </div>
       <Text variant="title" tag="h1">
-        About me
+        Gabriel Schultz
       </Text>
       <Text variant="paragraph1" tag="p" align="justify">
-        I'm a programming enthusiast, currently working/studying front-end development.
-        Lately, I decided to start my back-end journey, on my way to full-stack.
+        Entusiasta da programação, atuo na área do desenvolvimento front-end.
+        Ultimamente tenho estudado desenvolvimento back-end visando desenvolver aplicações
+        fullstack em breve.
         <br />
-        Studying lover, I'm always learning something new.
-        My interests are math, music, and programming (of course).
-        <br />
-        With a degree in biology, I have participated in some education projects
-        and am passionate about teaching those starting out in anything I am already experienced in.
+        Professor e também eterno estudante, sempre aprender algo novo é uma regra de vida.
+        Principais interesses: matemática, computação, música e relações internacionais.
       </Text>
     </IntroductionCard>
-    <Text variant="title" tag="h3">
-      My skills
+    <a
+      href="https://drive.google.com/file/d/1hcKNvQZHD1K_hzCrnNTS7WZh5Muq4tS8/view?usp=sharing"
+      target="_blank"
+      rel="noreferrer"
+      style={{ textDecoration: 'none', marginTop: '2rem', width: '100%' }}
+    >
+      <Button fullWidth>
+        <Text variant="paragraph1" tag="span" color="#fff">
+          Currículo
+        </Text>
+      </Button>
+    </a>
+    <Text variant="subTitle" tag="h3">
+      Ferramentas que domino
     </Text>
     <SkillsList>
       {githubProjectsList.map((item) => (
@@ -125,19 +113,19 @@ const Home = () => (
         </Tooltip>
       ))}
     </SkillsList>
-    <a
+    {/* <a
       target="_blank"
       href="https://drive.google.com/file/d/1hcKNvQZHD1K_hzCrnNTS7WZh5Muq4tS8/view?usp=sharing"
       rel="noreferrer"
-      style={{ textDecoration: 'none', marginTop: '2rem' }}
+      style={{ textDecoration: 'none', marginTop: '2rem', width: '100%' }}
     >
-      <Button>
+      <Button fullWidth>
         <Text variant="paragraph1" tag="span" color="#fff">
           Resume
         </Text>
       </Button>
-    </a>
-  </PageWrapper>
+    </a> */}
+  </AboutMeWrapper>
 );
 
-export default Home;
+export default AboutMe;
