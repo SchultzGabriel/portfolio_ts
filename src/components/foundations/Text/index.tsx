@@ -48,6 +48,8 @@ const TextBase = styled.span<TextTypes>`
   ${(props) => TextStyleVariantsMap[props.variant]};
   color: ${(props) => (props.color ? props.color : props.theme.color)};
   text-align: ${(props) => (props.align)};
+  width: fit-content;
+  margin: 0;
 `;
 
 export default ({

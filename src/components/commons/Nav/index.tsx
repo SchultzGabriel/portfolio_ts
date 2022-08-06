@@ -10,12 +10,8 @@ const navItems = [
     link: '/',
   },
   {
-    label: 'My work',
+    label: 'Blog',
     link: '/work',
-  },
-  {
-    label: 'About me',
-    link: '/about',
   },
 ];
 

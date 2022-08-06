@@ -4,9 +4,6 @@ export default interface IProjectCard {
     title: string;
     path: string;
     description: string;
-    links: {
-      github: string;
-      prod?: string;
-    };
+    link: string;
   };
 }
