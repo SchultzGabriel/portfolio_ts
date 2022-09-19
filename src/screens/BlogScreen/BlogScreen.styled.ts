@@ -7,13 +7,13 @@ const PostList = styled.ul`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 10%;
   width: 100%;
   gap: 2rem;
   
   ${breakpointMedia({
     md: css`
     flex-direction: row;
+    padding: 0 10%;
     `,
   })}
 `;

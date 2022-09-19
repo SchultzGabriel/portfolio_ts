@@ -87,6 +87,12 @@ width: 100%;
   width: 100%;
 }
 
+.teste{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .center figure img{
   width: 100%;
 }
