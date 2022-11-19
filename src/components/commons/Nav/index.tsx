@@ -11,7 +11,7 @@ const navItems = [
   },
   {
     label: 'Blog',
-    link: '/work',
+    link: '/blog',
   },
 ];
 
